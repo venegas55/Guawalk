@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "776320478834",
+    "project_id": "guawalk-lvdev-t1",
+    "storage_bucket": "guawalk-lvdev-t1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:776320478834:android:0115030e9feccf00ed5ceb",
+        "android_client_info": {
+          "package_name": "com.example.guawalk"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "776320478834-dmh8ol4uubfi43u4glicqs47kordpvsr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjY8a7JdXuxHhkqGWAMJp-h3LKm_v5NWQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "776320478834-dmh8ol4uubfi43u4glicqs47kordpvsr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
