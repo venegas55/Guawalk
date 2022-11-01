@@ -51,7 +51,7 @@
                 android:layout_weight="1"
                 android:backgroundTint="#A56751"
                 android:text="Registrar"
-                android:textColor="#212121" />
+                android:textColor="#000000" />
 
             <Space
                 android:layout_width="wrap_content"
