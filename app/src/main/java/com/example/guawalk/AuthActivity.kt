@@ -4,10 +4,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.google.firebase.analytics.FirebaseAnalytics
 
-class MainActivity : AppCompatActivity() {
+class AuthActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_auth)
 
 
         //Variable para mandar eventos a firebase analytics
@@ -15,5 +15,13 @@ class MainActivity : AppCompatActivity() {
         val bundle = Bundle()
         bundle.putString("message", "Integración Firebase completa")
         analytics.logEvent("initScreen", bundle)
+
+        //setup del Auth
+        setup()
+
+    }
+    private fun setup() {
+        
+
     }
 }
