@@ -1,10 +1,10 @@
 package com.example.guawalk
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
-import android.provider.ContactsContract.CommonDataKinds.Email
 import android.widget.Button
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 
 enum class ProviderType {
@@ -23,7 +23,13 @@ class HomeActivity : AppCompatActivity() {
         setup(email ?: "", provider ?: "")
     }
 
+    private fun goDice() {
+        val goDiceIntent = Intent(this,DiceActivity::class.java)
+        startActivity(goDiceIntent)
+    }
+
     private fun setup(email: String, provider: String) {
+        // pasar valores de email y de proveedor mediante bundle...
         title = "home"
         val emailLabel = findViewById<TextView>(R.id.emailTV)
         val providerLabel = findViewById<TextView>(R.id.providerTV)
@@ -35,7 +41,15 @@ class HomeActivity : AppCompatActivity() {
             FirebaseAuth.getInstance().signOut()
             onBackPressed()
 
+            }
+        //pasar a la actividad de los dados
+        val botonDados = findViewById<Button>(R.id.botonDados)
+        botonDados.setOnClickListener(){
+            goDice()
+
+
         }
+
 
 
     }

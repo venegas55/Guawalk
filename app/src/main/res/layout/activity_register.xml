@@ -33,8 +33,9 @@
         app:srcCompat="@drawable/guawalk_logo" />
 
     <LinearLayout
+        android:id="@+id/linearLayout2"
         android:layout_width="384dp"
-        android:layout_height="336dp"
+        android:layout_height="390dp"
         android:gravity="center"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -42,7 +43,7 @@
         app:layout_constraintHorizontal_bias="0.476"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.342">
+        app:layout_constraintVertical_bias="0.31">
 
         <EditText
             android:id="@+id/etName"
@@ -52,7 +53,8 @@
             android:ems="10"
             android:hint="Nombre Completo"
             android:inputType="textPersonName"
-            android:textColorHint="#004D40" />
+            android:textColorHint="#004D40"
+            android:visibility="gone" />
 
         <EditText
             android:id="@+id/etUser"
@@ -62,7 +64,8 @@
             android:ems="10"
             android:hint="Usuario"
             android:inputType="textPersonName"
-            android:textColorHint="#004D40" />
+            android:textColorHint="#004D40"
+            android:visibility="gone" />
 
         <EditText
             android:id="@+id/etEmail"
@@ -73,10 +76,39 @@
             android:inputType="textEmailAddress"
             android:textColorHint="#004D40" />
 
-        <Spinner
-            android:id="@+id/regSpinSex"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:minHeight="48dp" />
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="316dp"
+            android:layout_height="63dp"
+            android:ems="10"
+            android:hint="Contraseña"
+            android:inputType="textPassword"
+            android:minHeight="48dp"
+            android:textColorHint="#004D40" />
+
     </LinearLayout>
+
+    <Button
+        android:id="@+id/botonRegistrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Registrar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        app:layout_constraintVertical_bias="0.165" />
+
+    <Button
+        android:id="@+id/botonRegresar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Regresar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/botonRegistrar"
+        app:layout_constraintVertical_bias="0.209" />
 </androidx.constraintlayout.widget.ConstraintLayout>

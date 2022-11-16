@@ -1,12 +1,11 @@
 package com.example.guawalk
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import androidx.appcompat.app.AlertDialog
-import com.google.android.material.textfield.TextInputEditText
+import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.analytics.FirebaseAnalytics
 import com.google.firebase.auth.FirebaseAuth
 
@@ -48,28 +47,21 @@ class AuthActivity : AppCompatActivity() {
         startActivity(homeIntent)
 
     }
+    private fun showRegister(){
+        val registerIntent = Intent(this, Register::class.java)
+        startActivity(registerIntent)
+    }
 
     private fun setup() {
-        title = "LogIn"
-        val signUpButton = findViewById<Button>(R.id.signUpButton)
-        val logInButton = findViewById<Button>(R.id.logInButton)
+        val botonRegistro = findViewById<Button>(R.id.botonRegistro)
+        val botonLogIn = findViewById<Button>(R.id.botonLogIn)
         val emailTB = findViewById<EditText>(R.id.emailTB)
         val passwordTB = findViewById<EditText>(R.id.passwordTB)
-        //Logica para el boton registrar
-        signUpButton.setOnClickListener {
-            if (emailTB.text.isNotEmpty() && passwordTB.text.isNotEmpty()){
-
-                FirebaseAuth.getInstance().createUserWithEmailAndPassword(emailTB.text.toString(), passwordTB.text.toString()).addOnCompleteListener{
-
-                    if (it.isSuccessful) {
-                        showHome(it.result?.user?.email ?: "", ProviderType.BASIC)
-                    } else {
-                        showAlert()
-                    }
-                }
-            }
+        //Logica para el boton registro
+        botonRegistro.setOnClickListener {
+            showRegister()
         }
-        logInButton.setOnClickListener {
+        botonLogIn.setOnClickListener {
             if (emailTB.text.isNotEmpty() && passwordTB.text.isNotEmpty()){
 
                 FirebaseAuth.getInstance().signInWithEmailAndPassword(emailTB.text.toString(), passwordTB.text.toString()).addOnCompleteListener{
